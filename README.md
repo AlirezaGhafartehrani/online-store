@@ -1,3 +1,4 @@
 # online-store
 Designing an online store.
-Web programming both front and back implementation
+HTML5 & CSS3 & JavaScript programming 
+Both front and back implementation
