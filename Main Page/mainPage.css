@@ -34,7 +34,7 @@ body {
 #sign-button {
     border-radius: 24px;
     border: 3px solid rgb(255, 200, 10);
-    padding: 10px 30px 10px 20px;
+    padding: 10px 20px 10px 20px;
     text-align: center;
     align-content: center;
     justify-content: center;
@@ -52,7 +52,7 @@ body {
 
 /*The space between sign-button and the right side of menu*/
 #empty-menu {
-    flex-basis: 450px;
+    flex-basis: 500px;
 }
 
 
@@ -82,7 +82,7 @@ body {
     display: block;
     direction: rtl;
     text-align: right;
-    padding: 10px 16px 10px 40px;
+    padding: 13px 16px 13px 30px;
     min-width: 130px;
 }
 
