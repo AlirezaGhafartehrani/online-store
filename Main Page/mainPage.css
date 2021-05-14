@@ -1,0 +1,107 @@
+html {
+    font-size: 16px;
+    font-family: "B Yekan", serif;
+    background-color: white;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+    align-items: center;
+}
+
+#menu > div {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: rgb(114, 120, 125);
+    background-color: white;
+}
+
+.menu_item:hover {
+    color: rgb(14, 186, 197);
+    cursor: pointer;
+}
+
+#sign_button {
+    border-radius: 24px;
+    border: 3px solid rgb(255, 200, 10);
+    padding: 10px 30px 10px 20px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    color: black;
+    margin-bottom: 0;
+    min-width: 130px;
+}
+
+#sign_button:hover {
+    background-color: rgb(255, 200, 10);
+    color: black;
+    cursor: pointer;
+}
+
+#shop_button {
+    color: rgb(14, 186, 197);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#empty_menu {
+    flex-basis: 550px;
+}
+
+
+.fa-chevron-down {
+    padding-right: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /*z-index: -1;*/
+    background-color: rgb(225, 225, 225);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-content: center;
+}
+
+/* Options inside the dropdown */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    direction: rtl;
+    text-align: right;
+    padding: 10px 16px 10px 40px;
+    min-width: 130px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover{
+    background-color: rgb(225, 225, 225);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
