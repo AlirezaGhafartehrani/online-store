@@ -24,6 +24,10 @@ html {
     color: rgb(114, 120, 125);
     background-color: white;
 }
+.menu_item{
+    text-align: right;
+    direction: rtl;
+}
 
 .menu_item:hover {
     color: rgb(14, 186, 197);
@@ -40,12 +44,6 @@ html {
     color: black;
     margin-bottom: 0;
     min-width: 130px;
-}
-
-#sign_button:hover {
-    background-color: rgb(255, 200, 10);
-    color: black;
-    cursor: pointer;
 }
 
 #shop_button {
@@ -100,10 +98,16 @@ html {
     display: block;
 }
 
-.dropdown:hover {
+.dropdown:hover{
     background-color: rgb(225, 225, 225);
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
+}
+
+.dropdown:hover #sign_button{
+    background-color: rgb(255, 200, 10);
+    color: black;
+    cursor: pointer;
 }
 
 .footer {
