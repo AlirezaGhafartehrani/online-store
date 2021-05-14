@@ -1,14 +1,8 @@
-html {
-    font-size: 16px;
+body {
+    font-size: 19px;
     font-family: "B Yekan", serif;
     background-color: white;
-}
-
-#main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    margin: 0;
 }
 
 #menu {
@@ -16,6 +10,8 @@ html {
     flex-direction: row;
     height: 65px;
     align-items: center;
+    margin: 5px 0 5px 0;
+    width: 100%;
 }
 
 #menu > div {
@@ -24,17 +20,18 @@ html {
     color: rgb(114, 120, 125);
     background-color: white;
 }
-.menu_item{
+
+.menu-item {
     text-align: right;
     direction: rtl;
 }
 
-.menu_item:hover {
+.menu-item:hover {
     color: rgb(14, 186, 197);
     cursor: pointer;
 }
 
-#sign_button {
+#sign-button {
     border-radius: 24px;
     border: 3px solid rgb(255, 200, 10);
     padding: 10px 30px 10px 20px;
@@ -43,17 +40,19 @@ html {
     justify-content: center;
     color: black;
     margin-bottom: 0;
+    margin-top: 0;
     min-width: 130px;
 }
 
-#shop_button {
+#shop-button {
     color: rgb(14, 186, 197);
+    font-size: 30px;
     font-weight: bold;
-    font-size: 20px;
 }
 
-#empty_menu {
-    flex-basis: 550px;
+/*The space between sign-button and the right side of menu*/
+#empty-menu {
+    flex-basis: 450px;
 }
 
 
@@ -70,7 +69,6 @@ html {
 .dropdown-content {
     display: none;
     position: absolute;
-    /*z-index: -1;*/
     background-color: rgb(225, 225, 225);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -98,13 +96,13 @@ html {
     display: block;
 }
 
-.dropdown:hover{
+.dropdown:hover {
     background-color: rgb(225, 225, 225);
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
 }
 
-.dropdown:hover #sign_button{
+.dropdown:hover #sign-button {
     background-color: rgb(255, 200, 10);
     color: black;
     cursor: pointer;
@@ -119,4 +117,68 @@ html {
     color: rgb(114, 120, 125);
     text-align: center;
     direction: rtl;
+}
+
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero-header {
+    background-color: rgb(247, 84, 35);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#search-text {
+    direction: rtl;
+    text-align: center;
+    color: white;
+    margin-top: 120px;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+
+::placeholder {
+    text-align: center;
+}
+
+#search-place {
+    direction: rtl;
+    font-family: "B Yekan", serif;
+    font-size: 19px;
+    width: 500px;
+    padding: 5px 15px;
+    border-radius: 24px;
+    border-width: 0;
+    margin-bottom: 40px;
+    background-color: rgb(218, 224, 219);
+}
+
+#search-button {
+    border-radius: 24px;
+    background-color: rgb(255, 200, 10);
+    border-width: 0;
+    color: black;
+    direction: rtl;
+    font-family: "B Yekan", serif;
+    font-size: 19px;
+    width: 150px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+#search-button:hover {
+    box-shadow: 0 0 20px rgba(244, 247, 49, 1);
+}
+
+*:focus {
+    outline: none 0;
 }
