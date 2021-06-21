@@ -12,9 +12,9 @@
 <body>
 <div id="menu">
     <div>
-<!--                        <p id="sign-button" class="menu-item">-->
-<!--                            ورود/ثبت نام-->
-<!--                        </p>-->
+        <!--                        <p id="sign-button" class="menu-item">-->
+        <!--                            ورود/ثبت نام-->
+        <!--                        </p>-->
         <div class="dropdown menu-item">
             <p id="sign-button">هادی<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <div class="dropdown-content">
@@ -63,15 +63,55 @@
 </div>
 
 <div id="sort-container">
-<div id="sort-based-on">
-    <p>مرتب سازی بر اساس:</p>
-    <button class="sort-based-on--button">بیشترین فروش</button>
-    <button class="sort-based-on--button">قیمت</button>
-
+    <div id="sort-based-on">
+        <p>مرتب سازی بر اساس:</p>
+        <button class="sort-based-on--button">بیشترین فروش</button>
+        <button class="sort-based-on--button">قیمت</button>
+    </div>
 </div>
+
+<div id="goods-container">
+    <div id="goods-right-side">
+        <div id="categories" class="border-px">
+            <div>
+                <p id="categories-header" >دسته&#8204;بندی ها</p>
+                <hr class="solid-divider">
+            </div>
+            <div id="categories-checkbox">
+                <form action="">
+                    <input type="checkbox" id="cat1" name="cat1" value="1" class="checkbox">
+                    <label for="cat1">دسته&#8204;بندی یک</label><br>
+                    <input type="checkbox" id="cat2" name="cat2" value="2" class="checkbox">
+                    <label for="cat2">دسته&#8204;بندی دو</label><br>
+                    <input type="checkbox" id="cat3" name="cat3" value="3" class="checkbox">
+                    <label for="cat3">دسته&#8204;بندی سه</label><br>
+                    <input type="checkbox" id="cat4" name="cat4" value="4" class="checkbox">
+                    <label for="cat4">دسته&#8204;بندی چهار</label><br>
+                    <!--                    <input type="submit" value="Submit">-->
+                </form>
+            </div>
+        </div>
+        <div>
+            <hr class="flex-gap">
+        </div>
+        <div id="price-slider">
+            <label for="price-range" id="price-label">تنظیم قیمت کالا</label>
+            <hr class="solid-divider">
+            <input type="range" min="10000" max="3000000" value="500000" id="price-range" step="1000"
+                   oninput="this.nextElementSibling.value = this.value">
+            <output id="slider-value">500000</output>
+        </div>
+    </div>
+
+    <div id="goods-left-side">
+        <div class="good">
+            <img src="pic/bag.png" alt="bag image" class="good-image">
+        </div>
+
+    </div>
 </div>
 <div class="footer">
-    <p>تمامی حقوق برای توسعه دهندگان (نیک و علیرضا) محفوظ است.</p>
+    <p>تمامی حقوق برای توسعه دهندگان (نیک) محفوظ است.</p>
 </div>
 </body>
 </html>

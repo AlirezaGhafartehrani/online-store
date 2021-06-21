@@ -183,6 +183,7 @@ body {
     padding-right: 40px;
     direction: rtl;
     height: 70px;
+    border-radius: 3px;
 }
 
 .sort-based-on--button {
@@ -202,6 +203,106 @@ body {
     box-shadow: 0 0 15px rgba(0, 157, 255, 1);
 
 }
+
+#goods-container {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#goods-left-side {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-items: right;
+    flex-direction: column;
+    margin: 10px 20px;
+    padding-right: 40px;
+    direction: rtl;
+    height: 200px;
+    flex-basis: 75%;
+    border-radius: 3px;
+}
+
+#goods-right-side {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-items: right;
+    flex-direction: column;
+    margin: 10px 20px;
+    direction: rtl;
+    flex-basis: 25%;
+    border-radius: 3px;
+}
+
+#categories, #price-slider{
+    border-radius: 3px;
+    background-color: white;
+}
+
+#categories-header, #categories-checkbox, #price-label, #slider-value {
+    padding-right: 40px;
+}
+
+#categories-header{
+    margin-top: 15px;
+}
+
+#price-slider{
+    padding-top: 15px;
+}
+
+#categories {
+    height: 270px;
+}
+#price-slider {
+    height: 170px;
+}
+
+.solid-divider {
+    border: 1px solid rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247);
+    margin: 15px 0;
+}
+
+.checkbox {
+    margin: 15px 0 15px 0;
+}
+
+.flex-gap {
+    border: 15px solid rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    padding: 0;
+}
+
+
+#price-range, #slider-value {
+    direction: ltr;
+    margin: 15px 80px;
+}
+
+/*#slider-value::before{*/
+/*    !*content: "\a";*!*/
+/*    white-space: pre;*/
+/*}*/
+
+/* Special styling for WebKit/Blink */
+
+input[type=range]::-webkit-slider-thumb {
+    border: none;
+    border-radius: 300px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 157, 255, 1);
+}
+
+
+#goods-left-side {
+    height: 600px;
+    flex-basis: 75%;
+}
+
+
+/*footer*/
 
 .footer {
     /*position: fixed;*/
