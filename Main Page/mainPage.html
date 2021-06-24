@@ -93,7 +93,6 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-        <script src="MainPage.js"></script>
 
     </div>
 </div>
@@ -231,21 +230,29 @@
                     <button class="purchase-button">خرید محصول</button>
                 </div>
             </div>
-
-
         </div>
-
-
     </div>
+</div>
 
 
+<!-- pagination elements -->
+<div class="pagination-section">
+    <a href="#" class="pagination-button" id="prev-page" onclick="prevPage()">صفحه قبل</a>
+    <a href="#" title="Page1" class="pagination-button active-page" id="page1" onclick="changePage('page1')">1</a>
+    <a href="#" title="Page2" class="pagination-button" id="page2" onclick="changePage('page2')">2</a>
+    <a href="#" title="Page3" class="pagination-button" id="page3" onclick="changePage('page3')">3</a>
+    <a href="#" class="pagination-button" id="next-page" onclick="nextPage()">صفحه بعد</a>
 </div>
-<div>
-    <hr class="free-space">
-</div>
+
+
+<!--<div>-->
+<!--    <hr class="free-space">-->
+<!--</div>-->
 
 <div class="footer">
     <p>تمامی حقوق برای توسعه دهندگان (نیک) محفوظ است.</p>
 </div>
+<script src="MainPage.js"></script>
+
 </body>
 </html>
