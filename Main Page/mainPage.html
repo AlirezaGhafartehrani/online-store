@@ -12,9 +12,9 @@
 <body>
 <div id="menu">
     <div>
-        <!--                        <p id="sign-button" class="menu-item">-->
-        <!--                            ورود/ثبت نام-->
-        <!--                        </p>-->
+        <!--                                <p id="sign-button" class="menu-item">-->
+        <!--                                    ورود/ثبت نام-->
+        <!--                                </p>-->
         <div class="dropdown menu-item">
             <p id="sign-button">هادی<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <div class="dropdown-content">
@@ -58,7 +58,43 @@
         </div>
 
         <button id="search-button"> جستجو کنید</button>
-        <img src="pic/clock.png" alt="clock image" id="clock-image">
+
+        <div class="slideshow-container">
+
+            <div class="slides fade">
+                <div class="number-text">1 / 4</div>
+                <img src="pic/1.jpg" class="slideshow-image" alt="img1">
+            </div>
+
+            <div class="slides fade">
+                <div class="number-text">2 / 4</div>
+                <img src="pic/2.jpg" class="slideshow-image" alt="img2">
+            </div>
+
+            <div class="slides fade">
+                <div class="number-text">3 / 4</div>
+                <img src="pic/3.jpg" class="slideshow-image" alt="img3">
+            </div>
+
+            <div class="slides fade">
+                <div class="number-text">4 / 4</div>
+                <img src="pic/4.png" class="slideshow-image" alt="img4">
+            </div>
+
+        </div>
+        <br>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <script src="MainPage.js"></script>
+
     </div>
 </div>
 
