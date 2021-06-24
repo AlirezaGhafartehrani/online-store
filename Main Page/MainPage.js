@@ -36,7 +36,7 @@ setInterval(plusSlides, 7000, 1); // every 7 sec
 // slideshow - end
 
 // pagination - start
-let itemsPerPage = 4;  // 15 is defualt, 4 is for testing
+let itemsPerPage = 15;
 let goods = document.getElementsByClassName("good");
 let totalPages = Math.ceil(goods.length / itemsPerPage);
 let firstPage = "page1";
@@ -44,15 +44,95 @@ let lastPage = "page" + totalPages.toString();
 let currentPage = "page1";
 
 window.onload = function () {
+    init(true);
+}
+
+function init(good) {
+    if (good) {
+        initGoods(40);
+    }
+    goods = document.getElementsByClassName("good");
+    totalPages = Math.ceil(goods.length / itemsPerPage);
+    lastPage = "page" + totalPages.toString();
     initPages();
     disPage();
     changePage("page1");
 }
 
+
+function createGood(src, alt, title, category, price) {
+    let goodContainer = document.getElementById("goods-grid-container");
+
+    let good = document.createElement("div");
+    good.setAttribute("class", "good");
+
+    let image = document.createElement("img");
+    image.setAttribute("src", src);
+    image.setAttribute("alt", alt);
+    image.setAttribute("class", "good-image");
+    good.appendChild(image);
+
+    let titleElement = document.createElement("p");
+    titleElement.setAttribute("class", "good-title");
+    let text1 = document.createTextNode(title.toString());
+    titleElement.appendChild(text1);
+    good.appendChild(titleElement);
+
+    let categoryElement = document.createElement("p");
+    categoryElement.setAttribute("class", "good-category");
+    let text2 = document.createTextNode(category.toString());
+    categoryElement.appendChild(text2);
+    good.appendChild(categoryElement);
+
+    let divider = document.createElement("hr");
+    divider.setAttribute("class", "solid-divider");
+    good.appendChild(divider);
+
+    let purchase = document.createElement("div");
+    purchase.setAttribute("class", "good-purchase");
+
+    let priceElement = document.createElement("p");
+    priceElement.setAttribute("class", "good-price");
+    let text3 = document.createTextNode(price.toString());
+    priceElement.appendChild(text3);
+    purchase.appendChild(priceElement);
+
+    let button = document.createElement("button");
+    button.setAttribute("class", "purchase-button");
+    let text4 = document.createTextNode("خرید محصول");
+    button.appendChild(text4);
+    purchase.appendChild(button);
+
+    good.appendChild(purchase);
+
+    goodContainer.appendChild(good);
+
+}
+
+function initGoods(n) {
+    for (let i = 0; i < n / 4; i++) {
+        createGood("pic/bag.png", "bag image", "کوله پشتی خردلی", "دسته بندی یک", "10,000 تومان")
+    }
+    for (let i = n / 4; i < n / 2; i++) {
+        createGood("pic/bag.png", "bag image", "کوله پشتی خردلی", "دسته بندی یک", "20,000 تومان")
+    }
+    for (let i = n / 2; i < (n * (3 / 4)); i++) {
+        createGood("pic/bag.png", "bag image", "کوله پشتی خردلی", "دسته بندی یک", "30,000 تومان")
+    }
+    for (let i = (n * (3 / 4)); i < n; i++) {
+        createGood("pic/bag.png", "bag image", "کوله پشتی خردلی", "دسته بندی یک", "40,000 تومان")
+    }
+}
+
+
 function initPages() {
     if (totalPages > 1) {
         let paginationSection = document.getElementById("pagination-section");
         let nextPage = document.getElementById("next-page");
+        let oldButtons = document.querySelectorAll(".pagination-button:not(.primary-button)");
+        oldButtons.forEach(element => element.parentNode.removeChild(element));
+
+
         for (let i = 2; i < totalPages + 1; i++) {
             let button = document.createElement("a");
             button.setAttribute("class", "pagination-button");
@@ -65,7 +145,6 @@ function initPages() {
             let text = document.createTextNode(i.toString());
             button.appendChild(text);
             paginationSection.insertBefore(button, nextPage);
-            console.log(button.onclick)
         }
         for (let i = 0; i < goods.length; i++) {
             goods[i].classList.add("hidden-good");
@@ -88,6 +167,18 @@ function disPage() {
         let button = document.getElementById("next-page");
         button.classList.remove("disable-page");
     }
+}
+
+
+function setItemPerPage(n) {
+    itemsPerPage = n;
+    for (let i = 10; i < 21; i += 5) {
+        let button = document.getElementById("items" + i.toString());
+        button.classList.remove("active-button");
+    }
+    let active = document.getElementById("items" + n.toString());
+    active.classList.add("active-button");
+    init(false);
 }
 
 function changePage(page) {

@@ -98,10 +98,10 @@
 </div>
 
 <div id="sort-container">
-    <div id="sort-based-on">
+    <div class="buttons-container">
         <p>مرتب سازی بر اساس:</p>
-        <button class="sort-based-on--button">بیشترین فروش</button>
-        <button class="sort-based-on--button">قیمت</button>
+        <button class="sort-based-on-button active-button">بیشترین فروش</button>
+        <button class="sort-based-on-button">قیمت</button>
     </div>
 </div>
 
@@ -139,6 +139,14 @@
     </div>
 
     <div id="goods-left-side">
+        <div id="select-item-per-page">
+            <div class="buttons-container">
+                <p>تعداد محصول در صفحه:</p>
+                <button class="item-number-button" onclick="setItemPerPage(10)" id="items10">10</button>
+                <button class="item-number-button active-button" onclick="setItemPerPage(15)" id="items15">15</button>
+                <button class="item-number-button" onclick="setItemPerPage(20)" id="items20">20</button>
+            </div>
+        </div>
         <div id="goods-grid-container">
             <div class="good">
                 <img src="pic/bag.png" alt="bag image" class="good-image">
@@ -146,110 +154,21 @@
                 <p class="good-category">دسته بندی یک</p>
                 <hr class="solid-divider">
                 <div class="good-purchase">
-                    <p>10,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>20,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>30,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>40,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>50,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>60,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>70,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>80,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>90,000 تومان</p>
-                    <button class="purchase-button">خرید محصول</button>
-                </div>
-            </div>
-            <div class="good">
-                <img src="pic/bag.png" alt="bag image" class="good-image">
-                <p class="good-title">کوله پشتی خردلی</p>
-                <p class="good-category">دسته بندی یک</p>
-                <hr class="solid-divider">
-                <div class="good-purchase">
-                    <p>100,000 تومان</p>
+                    <p class="good-price">10,000 تومان</p>
                     <button class="purchase-button">خرید محصول</button>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
 
 <!-- pagination elements -->
 <div id="pagination-section">
-    <a class="pagination-button" id="prev-page" onclick="prevPage()">صفحه قبل</a>
-    <a title="Page1" class="pagination-button active-page" id="page1" onclick="changePage('page1')">1</a>
-    <a class="pagination-button" id="next-page" onclick="nextPage()">صفحه بعد</a>
+    <a class="pagination-button primary-button" id="prev-page" onclick="prevPage()">صفحه قبل</a>
+    <a title="Page1" class="pagination-button active-page primary-button" id="page1" onclick="changePage('page1')">1</a>
+    <a class="pagination-button primary-button" id="next-page" onclick="nextPage()">صفحه بعد</a>
 </div>
 
 
