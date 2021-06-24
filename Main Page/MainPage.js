@@ -132,16 +132,13 @@ function initPages() {
         let oldButtons = document.querySelectorAll(".pagination-button:not(.primary-button)");
         oldButtons.forEach(element => element.parentNode.removeChild(element));
 
-
         for (let i = 2; i < totalPages + 1; i++) {
             let button = document.createElement("a");
             button.setAttribute("class", "pagination-button");
             let newId = "page" + i.toString();
             button.setAttribute("id", newId);
             button.setAttribute("title", newId);
-            button.onclick = function () {
-                changePage(newId);
-            };
+            button.onclick = function () {changePage(newId);};
             let text = document.createTextNode(i.toString());
             button.appendChild(text);
             paginationSection.insertBefore(button, nextPage);
@@ -182,21 +179,20 @@ function setItemPerPage(n) {
 }
 
 function changePage(page) {
-    let pageNumber = parseInt(currentPage[4]) - 1;
     currentPage = page;
+    let pageNumber = parseInt(currentPage[4]) - 1;
     disPage();
     let otherButtons = document.getElementsByClassName("pagination-button");
     for (let i = 0; i < otherButtons.length; i++) {
-        otherButtons[i].classList.remove("active-page");
+        otherButtons[i].classList.remove("active-button");
     }
     let clickedButton = document.getElementById(page);
-    clickedButton.classList.add("active-page");
+    clickedButton.classList.add("active-button");
 
 
     if (goods.length > itemsPerPage) {
         let start = itemsPerPage * pageNumber;
         let end = start + itemsPerPage;
-
         if (end > goods.length) {
             end = goods.length;
         }
@@ -209,7 +205,6 @@ function changePage(page) {
             }
         }
     }
-
 }
 
 function prevPage() {
