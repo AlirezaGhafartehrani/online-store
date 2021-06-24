@@ -349,13 +349,9 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: 0 0 15px rgba(0, 157, 255, 0.5);
 }
 
-
-.free-space {
-    border: 150px solid rgb(247, 247, 247);
-    margin: 0;
-    padding: 0;
+.hidden-good{
+    display: none;
 }
-
 
 /* Slideshow container */
 .slideshow-container {
@@ -465,7 +461,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /*Pagination*/
 
-.pagination-section {
+#pagination-section {
     text-align: center;
     height: 50px;
     display: flex;
@@ -482,6 +478,7 @@ input[type=range]::-webkit-slider-thumb {
     color: black;
     border-style:solid;
     border-color:#009DFF;
+    user-select: none;
 }
 
 .active-page{
