@@ -29,7 +29,8 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(plusSlides, 10000, 1);
 }
+
+setInterval(plusSlides, 7000, 1); // every 7 sec
 
 // slideshow - end
