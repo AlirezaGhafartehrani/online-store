@@ -1,5 +1,5 @@
 body {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "B Yekan", serif;
     background-color: white;
     margin: 0;
@@ -56,11 +56,6 @@ body {
     font-size: 20px;
     font-weight: bold;
     padding-right: 30px;
-}
-
-/*The space between sign-button and the right side of menu*/
-.blank-menu {
-    flex-basis: 500px;
 }
 
 
@@ -177,6 +172,8 @@ body {
 
 #search-button:hover {
     box-shadow: 0 0 20px rgba(244, 247, 49, 1);
+    cursor: pointer;
+
 }
 
 #sort-container {
@@ -204,15 +201,17 @@ body {
     color: black;
     direction: rtl;
     font-family: "B Yekan", serif;
-    font-size: 17px;
+    font-size: 15px;
     width: 140px;
-    padding: 5px;
+    padding: 7px;
 }
 
 .sort-based-on-button:hover, .item-number-button:hover, .active-button, .pagination-button:hover {
     background-color: rgb(0, 157, 255);
     box-shadow: 0 0 8px rgba(0, 157, 255, 1);
     color: white;
+    cursor: pointer;
+
 }
 
 #goods-container {
@@ -349,6 +348,8 @@ body {
 
 .purchase-button:hover {
     box-shadow: 0 0 15px rgba(0, 157, 255, 0.5);
+    cursor: pointer;
+
 }
 
 .hidden-good {
@@ -408,6 +409,8 @@ body {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+
 }
 
 /* Number text (1/4 etc) */
@@ -433,6 +436,8 @@ body {
 
 .active-dot, .dot:hover {
     background-color: #717171;
+    cursor: pointer;
+
 }
 
 /* Fading animation */
