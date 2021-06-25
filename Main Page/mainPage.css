@@ -3,23 +3,18 @@ body {
     font-family: "B Yekan", serif;
     background-color: white;
     margin: 0;
+    overflow-x: hidden;
 }
 
 #menu {
     display: flex;
-    flex-direction: row;
-    height: 30px;
     align-items: center;
-    margin: 20px 0 5px 0;
     width: 100%;
     justify-content: center;
 }
 
 #menu > div {
-    margin-left: 25px;
-    margin-right: 25px;
     color: rgb(114, 120, 125);
-    background-color: white;
 }
 
 .menu-item {
@@ -27,7 +22,15 @@ body {
     direction: rtl;
 }
 
-.menu-item:hover {
+
+.blank-menu{
+    flex-grow: 2;
+}
+
+.menu-item > p{
+    margin-left: 50px;
+}
+.menu-item > p:hover {
     color: rgb(14, 186, 197);
     cursor: pointer;
 }
@@ -35,13 +38,14 @@ body {
 #sign-button {
     border-radius: 24px;
     border: 3px solid rgb(255, 200, 10);
-    padding: 10px 20px 10px 20px;
+    padding: 0 20px 10px 20px;
     text-align: center;
     align-content: center;
     justify-content: center;
     color: black;
     margin-bottom: 0;
     margin-top: 0;
+    margin-left: 20px;
     min-width: 130px;
 }
 
@@ -49,16 +53,14 @@ body {
     color: rgb(14, 186, 197);
     font-size: 20px;
     font-weight: bold;
+    padding-right: 20px;
 }
 
-/*The space between sign-button and the right side of menu*/
-#empty-menu {
-    flex-basis: 500px;
-}
 
 
 .fa-chevron-down {
     padding-right: 10px;
+    margin-top: 10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -116,6 +118,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 #hero-header {
@@ -209,6 +213,7 @@ body {
     background-color: rgb(247, 247, 247);
     display: flex;
     flex-direction: row-reverse;
+    overflow-x: auto;
 }
 
 
@@ -278,6 +283,10 @@ body {
     height: 850px;
 }
 
+#select-item-per-page{
+    display: grid;
+}
+
 #goods-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -345,7 +354,7 @@ body {
     width: 100%;
     height: 900px;
     position: relative;
-    margin: -355px auto;
+    margin: -370px auto;
     z-index: -1;
 }
 
@@ -495,7 +504,7 @@ button.item-number-button {
     align-items: center;
     width: 100%;
 }
- #blank{
+.blank{
      width: 100%;
  }
 
