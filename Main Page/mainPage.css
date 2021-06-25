@@ -111,7 +111,7 @@ body {
     border-top-right-radius: 24px;
 }
 
-.dropdown:hover #sign-button {
+.dropdown:hover #sign-button, #sign-button:hover {
     background-color: rgb(255, 200, 10);
     color: black;
     cursor: pointer;
