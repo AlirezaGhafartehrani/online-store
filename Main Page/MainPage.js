@@ -300,3 +300,17 @@ inputRight.addEventListener("mouseup", function () {
     thumbRight.classList.remove("active");
 });
 // Range slider - end
+
+
+// server comminucations - start
+
+function storeButton(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("testP").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "http://localhost:8080/");
+    xhttp.send();
+}
+
+// server comminucations - end
