@@ -1,19 +1,4 @@
 let http = require('http');
-let mysql = require('mysql');
-
-let con = mysql.createConnection({
-    host: "localhost",
-    user: "webAdmin",
-    password: "AUgEPslVcgf9RI6z"
-});
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    con.query("CREATE DATABASE web_db", function (err, result) {
-        if (err) throw err;
-        console.log("Database created");
-    });
-});
 
 http.createServer(function (request, response) {
     if (request.method === 'GET') {
