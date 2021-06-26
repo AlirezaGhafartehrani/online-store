@@ -152,14 +152,14 @@ function initPages() {
 }
 
 function disPage() {
-    if (currentPage == firstPage) {
+    if (currentPage === firstPage) {
         let button = document.getElementById("prev-page");
         button.classList.add("disable-page");
     } else {
         let button = document.getElementById("prev-page");
         button.classList.remove("disable-page");
     }
-    if (currentPage == lastPage) {
+    if (currentPage === lastPage) {
         let button = document.getElementById("next-page");
         button.classList.add("disable-page");
     } else {
@@ -210,7 +210,7 @@ function changePage(page) {
 }
 
 function prevPage() {
-    if (currentPage != firstPage) {
+    if (currentPage !== firstPage) {
         let tmp = currentPage[4];
         tmp = parseInt(tmp) - 1;
         currentPage = "page" + tmp.toString();
@@ -220,7 +220,7 @@ function prevPage() {
 }
 
 function nextPage() {
-    if (currentPage != lastPage) {
+    if (currentPage !== lastPage) {
         let tmp = currentPage[4];
         tmp = parseInt(tmp) + 1;
         currentPage = "page" + tmp.toString();
@@ -231,7 +231,7 @@ function nextPage() {
 // pagination - end
 
 
-// Rane slider - start
+// Range slider - start
 let inputLeft = document.getElementById("input-left");
 let inputRight = document.getElementById("input-right");
 
@@ -244,13 +244,13 @@ function setLeftValue() {
         min = parseInt(_this.min),
         max = parseInt(_this.max);
 
-    _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+    _this.value = Math.min(parseInt(_this.value.toString()), parseInt(inputRight.value.toString()) - 1);
 
     let percent = ((_this.value - min) / (max - min)) * 100;
 
     thumbLeft.style.left = percent + "%";
     range.style.left = percent + "%";
-    document.getElementById("input-left-output").innerHTML = inputLeft.value;
+    document.getElementById("input-left-output").innerHTML = inputLeft.value.toString();
 }
 
 setLeftValue();
@@ -260,13 +260,13 @@ function setRightValue() {
         min = parseInt(_this.min),
         max = parseInt(_this.max);
 
-    _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+    _this.value = Math.max(parseInt(_this.value.toString()), parseInt(inputLeft.value.toString()) + 1);
 
     let percent = ((_this.value - min) / (max - min)) * 100;
 
     thumbRight.style.right = (100 - percent) + "%";
     range.style.right = (100 - percent) + "%";
-    document.getElementById("input-right-output").innerHTML = inputRight.value;
+    document.getElementById("input-right-output").innerHTML = inputRight.value.toString();
 }
 
 setRightValue();
@@ -302,7 +302,7 @@ inputRight.addEventListener("mouseup", function () {
 // Range slider - end
 
 
-// server comminucations - start
+// server communications - start
 
 function storeButton(){
     const xhttp = new XMLHttpRequest();
@@ -313,4 +313,4 @@ function storeButton(){
     xhttp.send();
 }
 
-// server comminucations - end
+// server communications - end
