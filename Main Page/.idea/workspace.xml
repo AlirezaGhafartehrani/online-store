@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebc4c775-3587-4375-9707-8c8e2c7ee1c0" name="Default Changelist" comment="server.js added, some play around too(Nodejs server)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1sW8kjsoTPygQ5gBQ3Q1ycDOrrI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Project/Web-project-online-store" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showLigatures" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="server" type="NodeJSConfigurationType" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebc4c775-3587-4375-9707-8c8e2c7ee1c0" name="Default Changelist" comment="" />
+      <created>1620977130002</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620977130002</updated>
+      <workItem from="1620977131264" duration="39818000" />
+      <workItem from="1624246315225" duration="2333000" />
+      <workItem from="1624248947432" duration="20222000" />
+      <workItem from="1624467845496" duration="653000" />
+      <workItem from="1624522582413" duration="2290000" />
+      <workItem from="1624541395915" duration="36728000" />
+      <workItem from="1624602703293" duration="7059000" />
+      <workItem from="1624609914244" duration="331000" />
+      <workItem from="1624610323881" duration="98000" />
+      <workItem from="1624721317411" duration="6627000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1620977192556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620977192556</updated>
+    </task>
+    <task id="LOCAL-00002" summary="menu added">
+      <created>1621003790942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621003790942</updated>
+    </task>
+    <task id="LOCAL-00003" summary="footer added">
+      <created>1621004474574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621004474574</updated>
+    </task>
+    <task id="LOCAL-00004" summary="menu edited">
+      <created>1621006266562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621006266562</updated>
+    </task>
+    <task id="LOCAL-00005" summary="hero section added + some edits">
+      <created>1621017901545</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621017901545</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sort section started + some edits">
+      <created>1621025068180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621025068180</updated>
+    </task>
+    <task id="LOCAL-00007" summary="some edits">
+      <created>1621025538454</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621025538454</updated>
+    </task>
+    <task id="LOCAL-00008" summary="right sidebar added.">
+      <created>1624265468877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624265468877</updated>
+    </task>
+    <task id="LOCAL-00009" summary="right sidebar added.">
+      <created>1624265546054</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624265546054</updated>
+    </task>
+    <task id="LOCAL-00010" summary="left sidebar added.">
+      <created>1624270891300</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624270891300</updated>
+    </task>
+    <task id="LOCAL-00011" summary="phase 2 started: slideshow added!">
+      <created>1624547340259</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624547340259</updated>
+    </task>
+    <task id="LOCAL-00012" summary="some edits">
+      <created>1624547620971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624547620971</updated>
+    </task>
+    <task id="LOCAL-00013" summary="some edits">
+      <created>1624547727348</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624547727348</updated>
+    </task>
+    <task id="LOCAL-00014" summary="pagination style added.">
+      <created>1624556434605</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624556434613</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pagination logic added.">
+      <created>1624561294252</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624561294252</updated>
+    </task>
+    <task id="LOCAL-00016" summary="set item per page added.">
+      <created>1624571050025</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624571050026</updated>
+    </task>
+    <task id="LOCAL-00017" summary="some crazyyy bugs fixed!">
+      <created>1624574139154</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624574139154</updated>
+    </task>
+    <task id="LOCAL-00018" summary="range slider completed.">
+      <created>1624579220084</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624579220085</updated>
+    </task>
+    <task id="LOCAL-00019" summary="range slider completed.">
+      <created>1624579566194</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624579566194</updated>
+    </task>
+    <task id="LOCAL-00020" summary="responsiveness added.">
+      <created>1624607997250</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624607997250</updated>
+    </task>
+    <task id="LOCAL-00021" summary="some visual bugs fixed.">
+      <created>1624609527451</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1624609527451</updated>
+    </task>
+    <task id="LOCAL-00022" summary="some visual bugs fixed.">
+      <created>1624609803758</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624609803758</updated>
+    </task>
+    <task id="LOCAL-00023" summary="some visual bugs fixed.">
+      <created>1624610234896</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624610234896</updated>
+    </task>
+    <task id="LOCAL-00024" summary="server.js added, some play around too(Nodejs server)">
+      <created>1624728004274</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1624728004274</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="menu added" />
+    <MESSAGE value="footer added" />
+    <MESSAGE value="menu edited" />
+    <MESSAGE value="hero section added + some edits" />
+    <MESSAGE value="sort section started + some edits" />
+    <MESSAGE value="right sidebar added." />
+    <MESSAGE value="left sidebar added." />
+    <MESSAGE value="phase 2 started: slideshow added!" />
+    <MESSAGE value="some edits" />
+    <MESSAGE value="pagination style added." />
+    <MESSAGE value="pagination logic added." />
+    <MESSAGE value="set item per page added." />
+    <MESSAGE value="some crazyyy bugs fixed!" />
+    <MESSAGE value="range slider completed." />
+    <MESSAGE value="responsiveness added." />
+    <MESSAGE value="some visual bugs fixed." />
+    <MESSAGE value="server.js added, some play around too(Nodejs server)" />
+    <option name="LAST_COMMIT_MESSAGE" value="server.js added, some play around too(Nodejs server)" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>
