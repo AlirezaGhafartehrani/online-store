@@ -4,7 +4,8 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
     host: "localhost",
     user: "webAdmin",
-    password: "AUgEPslVcgf9RI6z"
+    password: "AUgEPslVcgf9RI6z",
+    database: "web_db"
 });
 con.connect(function(err) {
     if (err) throw err;
@@ -14,6 +15,9 @@ con.connect(function(err) {
         console.log("Database created");
     });
 });
+
+
+
 http.createServer(function (request, response) {
     if (request.method === 'GET') {
         response.writeHead(200, {'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*'});
