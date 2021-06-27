@@ -306,14 +306,18 @@ inputRight.addEventListener("mouseup", function () {
 function login(username, password) {
     const request = new XMLHttpRequest();
     request.onload = function () {
-        localStorage.setItem("token", this.getResponseHeader('Authorization'));
-        document.getElementById("testP").innerHTML = localStorage.getItem("token");
+        if (this.getResponseHeader('Authorization') !== null)
+            localStorage.setItem("token", this.getResponseHeader('Authorization'));
+        document.getElementById("testP").innerHTML = this.responseText;
     }
     let data = dataCreator("username", username, "&");
     data += dataCreator("password", password, "");
-    request.open("POST", "http://localhost:3000/login");
+    // request.open("POST", "http://localhost:3000/login");
+    request.open("GET", "http://localhost:3000/");
+    request.setRequestHeader('Authorization', localStorage.getItem("token"));
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send(data);
+    // request.send(data);
+    request.send();
 }
 
 

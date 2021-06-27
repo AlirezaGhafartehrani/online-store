@@ -14,51 +14,52 @@ let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
-const uuid = require('uuid');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
 
 
-app.get('/', function (req, res) {
-    authentication(db, req.body.username, req.body.password).then(r =>
-        console.log(r));
 
-    res.set({
-        'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
+app.post('/login', function (req, res) {
+
+    authentication(db, req.body.username, req.body.password).then(function (val) {
+        let token = val.split("split")[0];
+        let message = val.split("split")[1];
+        res.set({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization': token,
+            'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
+        });
+        res.send(message);
     });
-    res.send();
-});
-app.post('/', function (req, res) {
-
-    authentication(db, req.body.username, req.body.password).then(r =>
-        console.log(r));
 
 
-    res.set({
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
-    });
-    res.send();
 });
 
-app.post('/sign-up', function (req, res) {
 
-    authentication(db, req.body.username, req.body.password).then(r =>
-        console.log(r));
-
+app.get('/', isLoggedIn, function (req, res) {
 
     res.set({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
     });
-    res.send();
+    res.send('you are in!');
 });
 
+app.post('/', isLoggedIn, function (req, res) {
+
+    res.set({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
+    });
+    res.send('you are in!');
+});
 
 
 app.listen(3000, function () {
@@ -75,7 +76,7 @@ function initDB(con, tables) {
             let sql;
             sql = "CREATE TABLE users (" +
                 "username VARCHAR(255) not null, " +
-                "password VARCHAR(15) not null, " +
+                "password VARCHAR(100) not null, " +
                 "full_name VARCHAR(255) not null," +
                 "address VARCHAR(300)," +
                 "balance NUMERIC(12, 2) default 0 check (balance >= 0)," +
@@ -139,9 +140,9 @@ function initDB(con, tables) {
 function addUser(con, username, password) {
     bcrypt.hash(password, 10, (err, hash) => {
         if (err) {
-           console.log(err);
+            console.log(err);
         } else {
-            let sql = "INSERT INTO users (username, password) VALUES (" + "\'" + username + "\'" + ", " + "\'" + con.escape(hash) + "\'" + ");";
+            let sql = "INSERT INTO users (username, password) VALUES (" + "\'" + username + "\'" + ", " + con.escape(hash) + ");";
             con.query(sql, function (err) {
                 if (err) throw err;
                 console.log("1 record inserted");
@@ -153,21 +154,59 @@ function addUser(con, username, password) {
 
 function authentication(con, username, password) {
     return new Promise((resolve, reject) => {
-        let sql = "SELECT password FROM users WHERE username = " + "\'" + username + "\'"
+        let sql = "SELECT password FROM users WHERE username = " + "\'" + username + "\'";
+
         con.query(sql, function (err, result) {
             if (err) {
                 console.log(err);
                 reject(err);
             }
-            let check;
+            let message;
+            let token;
             if (result.length > 0) {
-                check = result[0].password === password;
+                // message = result[0].password === password;
+                bcrypt.compare(password, result[0]['password'], (bErr, bResult) => {
+                    // wrong password
+                    if (bErr) {
+                        message = 'Username or password is incorrect!'
+                        resolve(`${token}split${message}`);
+                        throw bErr;
+                    }
+                    if (bResult) {
+                        token = jwt.sign({
+                                username: result[0].username,
+                            },
+                            'SECRETKEY', {
+                                expiresIn: '3h'
+                            }
+                        );
+                        message = 'logged in';
+                        resolve(`${token}split${message}`);
+                    }
+                });
             } else {
                 addUser(con, username, password);
-                check = 'added';
+                message = 'new user added';
+                resolve(`${token}split${message}`);
             }
-            resolve(check);
 
         });
+
     });
+}
+
+
+function isLoggedIn(req, res, next) {
+    try {
+        const token = req.get('authorization');
+        const decoded = jwt.verify(
+            token,
+            'SECRETKEY'
+        );
+        next();
+    } catch (err) {
+        return res.status(401).send({
+            msg: 'Your session is not valid!'
+        });
+    }
 }

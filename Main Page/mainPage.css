@@ -5,6 +5,7 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
 #menu {
     display: flex;
     flex-direction: row;
@@ -22,7 +23,7 @@ body {
     direction: rtl;
 }
 
-.menu-item > p:not(.sign-button){
+.menu-item > p:not(.sign-button) {
     margin-left: 50px;
 }
 
@@ -31,10 +32,11 @@ body {
     cursor: pointer;
 }
 
-.blank-menu{
+.blank-menu {
     flex-grow: 2;
 }
-#left-menu{
+
+#left-menu {
     margin-left: 30px;
 }
 
@@ -114,7 +116,6 @@ body {
     color: black;
     cursor: pointer;
 }
-
 
 
 #hero-container {
@@ -278,8 +279,6 @@ body {
 }
 
 
-
-
 #goods-left-side {
     background-color: rgb(247, 247, 247);
     display: flex;
@@ -291,7 +290,7 @@ body {
     height: 850px;
 }
 
-#select-item-per-page{
+#select-item-per-page {
     display: grid;
 }
 
@@ -512,15 +511,16 @@ button.item-number-button {
 
 }
 
-#slider-value{
+#slider-value {
     display: flex;
     justify-items: center;
     align-items: center;
     width: 100%;
 }
-.blank{
-     width: 100%;
- }
+
+.blank {
+    width: 100%;
+}
 
 .slider {
     position: relative;
@@ -528,6 +528,7 @@ button.item-number-button {
     height: 8px;
     margin: 0 15px;
 }
+
 .slider > .track {
     position: absolute;
     z-index: 1;
@@ -538,6 +539,7 @@ button.item-number-button {
     border-radius: 5px;
     background-color: #95e7ed;
 }
+
 .slider > .range {
     position: absolute;
     z-index: 2;
@@ -548,6 +550,7 @@ button.item-number-button {
     border-radius: 5px;
     background-color: #009DFF;
 }
+
 .slider > .thumb {
     position: absolute;
     z-index: 3;
@@ -559,20 +562,24 @@ button.item-number-button {
     border-style: solid;
     border-width: 3px;
     border-color: #009DFF;
-    box-shadow: 0 0 0 0 rgba(98,0,238,.1);
+    box-shadow: 0 0 0 0 rgba(98, 0, 238, .1);
     transition: box-shadow .3s ease-in-out;
 }
+
 .slider > .thumb.left {
     left: 25%;
     transform: translate(-15px, -10px);
 }
+
 .slider > .thumb.right {
     right: 25%;
     transform: translate(15px, -10px);
 }
+
 .slider > .thumb.hover {
     box-shadow: 0 0 0 7px rgba(160, 210, 254, 0.4);
 }
+
 .slider > .thumb.active {
     box-shadow: 0 0 0 10px rgba(160, 210, 254, 0.5);
 }
@@ -586,6 +593,7 @@ input[type=range] {
     width: 100%;
     opacity: 0;
 }
+
 input[type=range]::-webkit-slider-thumb {
     pointer-events: all;
     width: 30px;
@@ -595,9 +603,6 @@ input[type=range]::-webkit-slider-thumb {
     background-color: red;
     -webkit-appearance: none;
 }
-
-
-
 
 
 /*footer*/
