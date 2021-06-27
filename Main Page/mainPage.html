@@ -12,11 +12,11 @@
 <body>
 <div id="menu">
     <div id="left-menu">
-<!--                                        <p id="sign-button" class="menu-item">-->
-<!--                                            ورود/ثبت نام-->
-<!--                                        </p>-->
+        <p class="sign-button menu-item"  onclick="login('nicky', '12345678')">
+           <a href="../Sign%20Up%20Page/signUp.html" target="_blank"> ورود/ثبت نام</a>
+        </p>
         <div class="dropdown menu-item">
-            <p id="sign-button">هادی<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+            <p class="sign-button">هادی<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <div class="dropdown-content">
                 <a href="#">پروفایل</a>
                 <a href="#">خروج از حساب</a>
@@ -27,24 +27,24 @@
         <!--    just an empty space! -->
     </div>
     <div class="menu-item">
-        <p ><a>محصولات</a></p>
+        <p><a href="mainPage.html#goods-grid-container">محصولات</a></p>
 
     </div>
     <div class="menu-item">
-        <p ><a>پشتیبانی</a></p>
+        <p><a>پشتیبانی</a></p>
 
 
     </div>
     <div class="menu-item">
-        <p ><a>تماس با ما</a></p>
+        <p><a>تماس با ما</a></p>
 
     </div>
     <div class="menu-item">
-        <p><a>صفحه اول</a></p>
+        <p><a href="mainPage.html">صفحه اول</a></p>
 
     </div>
     <div class="menu-item">
-        <p id="shop-button" onclick="storeButton()"><a>فروشگاه</a></p>
+        <p id="shop-button"><a href="mainPage.html#goods-grid-container">فروشگاه</a></p>
 
     </div>
 </div>
@@ -144,9 +144,9 @@
                         <div class="thumb right"></div>
                     </div>
                     <div id="slider-value">
-                        <p id = input-left-output></p>
+                        <p id=input-left-output></p>
                         <p class="blank"></p>
-                        <p id = input-right-output></p>
+                        <p id=input-right-output></p>
                     </div>
 
                 </div>
@@ -187,7 +187,6 @@
        onclick="changePage('page1')">1</a>
     <a class="pagination-button primary-button" id="next-page" onclick="nextPage()">صفحه بعد</a>
 </div>
-
 
 
 <div>

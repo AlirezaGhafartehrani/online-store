@@ -22,7 +22,7 @@ body {
     direction: rtl;
 }
 
-.menu-item > p:not(#sign-button){
+.menu-item > p:not(.sign-button){
     margin-left: 50px;
 }
 
@@ -38,7 +38,7 @@ body {
     margin-left: 30px;
 }
 
-#sign-button {
+.sign-button {
     border-radius: 24px;
     border: 3px solid rgb(255, 200, 10);
     padding: 10px 20px 10px 20px;
@@ -67,6 +67,7 @@ body {
 .dropdown {
     position: relative;
     margin-top: 0;
+    display: none;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -93,11 +94,13 @@ body {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: rgb(247, 247, 247);
+    color: black;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    color: black;
 }
 
 .dropdown:hover {
@@ -106,7 +109,7 @@ body {
     border-top-right-radius: 24px;
 }
 
-.dropdown:hover #sign-button, #sign-button:hover {
+.dropdown:hover .sign-button, .sign-button:hover {
     background-color: rgb(255, 200, 10);
     color: black;
     cursor: pointer;
@@ -619,6 +622,7 @@ input[type=range]::-webkit-slider-thumb {
 
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
+    color: inherit;
 }
 
 *:focus {

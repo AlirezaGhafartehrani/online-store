@@ -168,7 +168,6 @@ function disPage() {
     }
 }
 
-
 function setItemPerPage(n) {
     itemsPerPage = n;
     for (let i = 10; i < 21; i += 5) {
@@ -304,13 +303,22 @@ inputRight.addEventListener("mouseup", function () {
 
 // server communications - start
 
-function storeButton(){
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-        document.getElementById("testP").innerHTML = this.responseText;
+function login(username, password) {
+    const request = new XMLHttpRequest();
+    request.onload = function () {
+        localStorage.setItem("token", this.getResponseHeader('Authorization'));
+        document.getElementById("testP").innerHTML = localStorage.getItem("token");
     }
-    xhttp.open("GET", "http://localhost:8080/");
-    xhttp.send();
+    let data = dataCreator("username", username, "&");
+    data += dataCreator("password", password, "");
+    request.open("POST", "http://localhost:3000/login");
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send(data);
+}
+
+
+function dataCreator(key, value, and) {
+    return key + '=' + value + and;
 }
 
 // server communications - end
