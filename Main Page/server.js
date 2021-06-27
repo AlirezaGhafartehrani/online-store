@@ -48,7 +48,7 @@ app.get('/', isLoggedIn, function (req, res) {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
     });
-    res.send('you are in!');
+    res.send('logged in');
 });
 
 app.post('/', isLoggedIn, function (req, res) {
@@ -58,7 +58,7 @@ app.post('/', isLoggedIn, function (req, res) {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Expose-Headers': 'Content-Type, Allow, Authorization, X-Response-Time'
     });
-    res.send('you are in!');
+    res.send('logged in');
 });
 
 

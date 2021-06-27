@@ -57,6 +57,7 @@ function init(good) {
     initPages();
     disPage();
     changePage("page1");
+    checkLogin();
 }
 
 
@@ -302,27 +303,60 @@ inputRight.addEventListener("mouseup", function () {
 
 
 // server communications - start
+function dataCreator(key, value, and) {
+    return key + '=' + value + and;
+}
 
 function login(username, password) {
     const request = new XMLHttpRequest();
     request.onload = function () {
         if (this.getResponseHeader('Authorization') !== null)
             localStorage.setItem("token", this.getResponseHeader('Authorization'));
-        document.getElementById("testP").innerHTML = this.responseText;
+        if (this.responseText === 'logged in') {
+            document.getElementById('before-login').style.display = 'none';
+            document.getElementById('username-button').innerHTML= `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
+            document.getElementById('after-login').style.display = 'block';
+        } else {
+            document.getElementById('before-login').style.display = 'block';
+            document.getElementById('after-login').style.display = 'none';
+            console.log(this.responseText)
+        }
     }
     let data = dataCreator("username", username, "&");
     data += dataCreator("password", password, "");
-    // request.open("POST", "http://localhost:3000/login");
+    request.open("POST", "http://localhost:3000/login");
+    // request.open("GET", "http://localhost:3000/");
+    localStorage.setItem('username', username);
+    request.setRequestHeader('Authorization', localStorage.getItem("token"));
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send(data);
+    // request.send();
+}
+function checkLogin(){
+    const username = localStorage.getItem('username');
+    const request = new XMLHttpRequest();
+    request.onload = function () {
+        if (this.responseText === 'logged in') {
+            document.getElementById('before-login').style.display = 'none';
+            document.getElementById('username-button').innerHTML= `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
+            document.getElementById('after-login').style.display = 'block';
+        } else {
+            document.getElementById('before-login').style.display = 'block';
+            document.getElementById('after-login').style.display = 'none';
+            console.log(this.responseText)
+        }
+    }
     request.open("GET", "http://localhost:3000/");
     request.setRequestHeader('Authorization', localStorage.getItem("token"));
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // request.send(data);
     request.send();
 }
 
 
-function dataCreator(key, value, and) {
-    return key + '=' + value + and;
+function logout(){
+    localStorage.removeItem("token");
+    document.getElementById('before-login').style.display = 'block';
+    document.getElementById('after-login').style.display = 'none';
 }
 
 // server communications - end
