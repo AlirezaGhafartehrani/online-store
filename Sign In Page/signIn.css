@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "B Yekan", "ABeeZee", serif;
+  background-color: rgb(230, 230, 230);
+  color: rgb(33, 33, 33);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.store_entrance {
+  color: rgb(14, 186, 197);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+}
+
+.email {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.email__1 {
+  background: rgb(14, 186, 197);
+  color: white;
+  width: 75px;
+  height: 28px;
+  text-align: center;
+}
+
+.email__2 {
+  background: rgb(255, 255, 255);
+  color: rgb(114, 120, 125);
+  width: 200px;
+  height: 28px;
+  text-align: right;
+  padding-right: 10px;
+  border: none;
+  font-family: "B Yekan", "ABeeZee", serif;
+  font-size: 10px;
+}
+
+.password {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+}
+
+.password__1 {
+  background: rgb(14, 186, 197);
+  color: white;
+  width: 75px;
+  height: 28px;
+  text-align: center;
+  align-items: center;
+}
+
+.password__2 {
+  background: rgb(255, 255, 255);
+  color: rgb(114, 120, 125);
+  width: 200px;
+  height: 28px;
+  text-align: right;
+  padding-right: 10px;
+  border: none;
+  font-family: "B Yekan", "ABeeZee", serif;
+  font-size: 10px;
+}
+
+.input {
+  font-size: 13px;
+  font-family: "B Yekan", "ABeeZee", serif;
+  display: flex;
+  flex-direction: row-reverse;
+  background: rgb(255, 200, 10);
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border-color: rgb(255, 200, 10);
+}
