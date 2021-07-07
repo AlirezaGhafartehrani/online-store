@@ -136,7 +136,7 @@ body {
   height: 80vh;
 }
 
-.store_entrance {
+.page-title {
   color: rgb(14, 186, 197);
   display: flex;
   flex-direction: row-reverse;
@@ -210,6 +210,12 @@ body {
   align-items: center;
   border-radius: 15px;
   border-color: rgb(255, 200, 10);
+}
+
+.signUp-link{
+  padding: 30px;
+  font-size: 14px;
+  font-display: aquamarine;
 }
 
 .footer {
