@@ -11,15 +11,60 @@
     <title>Sign In Page</title>
 </head>
 <body>
-<div class="store_entrance">فروشگاه - ورود</div>
-<div class="email">
-    <div class="email__1">ایمیل</div>
-    <input type="text" class="email__2" placeholder="... ایمیل خود را وارد کنید">
-</div>
-<div class="password">
-    <div class="password__1">رمز عبور</div>
-    <input type="password" class="password__2" placeholder="... رمز عبور خود را وارد کنید">
-</div>
-<button class="input">ورود</button>
+    <div id="menu">
+        <div id="left-menu">
+            <!--     onclick="login('nicolo', '12345678') must be called in signUp.html, it's here just for test!   -->
+            <p id="before-login" class="sign-button menu-item" onclick="login('nicolo', '12345678')">
+                <a href="../Sign%20Up%20Page/signUp.html" target="_blank"> ورود/ثبت نام</a>
+            </p>
+            <div id="after-login" class="dropdown menu-item">
+                <p id="username-button" class="sign-button">هادی<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+                <div class="dropdown-content">
+                    <a href="#">پروفایل</a>
+                    <a href="#" onclick="logout()">خروج از حساب</a>
+                </div>
+            </div>
+        </div>
+        <div class="blank-menu">
+            <!--    just an empty space! -->
+        </div>
+        <div class="menu-item">
+            <p><a href="mainPage.html#goods-grid-container">محصولات</a></p>
+    
+        </div>
+        <div class="menu-item">
+            <p><a>پشتیبانی</a></p>
+    
+    
+        </div>
+        <div class="menu-item">
+            <p><a>تماس با ما</a></p>
+    
+        </div>
+        <div class="menu-item">
+            <p><a href="mainPage.html">صفحه اول</a></p>
+    
+        </div>
+        <div class="menu-item">
+            <p id="shop-button"><a href="mainPage.html#goods-grid-container">فروشگاه</a></p>
+    
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="store_entrance">فروشگاه - ورود</div>
+        <div class="email">
+            <div class="email__1">ایمیل</div>
+            <input type="text" class="email__2" placeholder="... ایمیل خود را وارد کنید">
+        </div>
+        <div class="password">
+            <div class="password__1">رمز عبور</div>
+            <input type="password" class="password__2" placeholder="... رمز عبور خود را وارد کنید">
+        </div>
+        <button class="input">ورود</button>
+    </div>
+    <div class="footer">
+        <p>تمامی حقوق برای توسعه دهندگان (نیک) محفوظ است.</p>
+    </div>
+    <script src="signIn.js"></script>
 </body>
 </html>

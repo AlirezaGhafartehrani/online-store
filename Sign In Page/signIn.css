@@ -8,12 +8,132 @@ body {
   font-size: 16px;
   font-family: "B Yekan", "ABeeZee", serif;
   background-color: rgb(230, 230, 230);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 12vh;
+}
+
+#menu > div {
+  color: rgb(114, 120, 125);
+}
+
+.menu-item {
+  text-align: right;
+  direction: rtl;
+}
+
+.menu-item > p:not(.sign-button) {
+  margin-left: 50px;
+}
+
+.menu-item > p:hover {
+  color: rgb(14, 186, 197);
+  cursor: pointer;
+}
+
+.blank-menu {
+  flex-grow: 2;
+}
+
+#left-menu {
+  margin-left: 30px;
+}
+
+.sign-button {
+  border-radius: 24px;
+  border: 3px solid rgb(255, 200, 10);
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  color: black;
+  margin-bottom: 0;
+  margin-top: 0;
+  min-width: 130px;
+}
+
+#shop-button {
+  color: rgb(14, 186, 197);
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+.fa-chevron-down {
+  padding-right: 10px;
+}
+
+#after-login {
+  display: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  margin-top: 0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(225, 225, 225);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  align-content: center;
+}
+
+/* Options inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  direction: rtl;
+  text-align: right;
+  padding: 13px 16px 13px 30px;
+  min-width: 130px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(247, 247, 247);
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: black;
+}
+
+.dropdown:hover {
+  background-color: rgb(225, 225, 225);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.dropdown:hover .sign-button,
+.sign-button:hover {
+  background-color: rgb(255, 200, 10);
+  color: black;
+  cursor: pointer;
+}
+
+.center-content {
   color: rgb(33, 33, 33);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 
 .store_entrance {
@@ -90,4 +210,60 @@ body {
   align-items: center;
   border-radius: 15px;
   border-color: rgb(255, 200, 10);
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(49, 52, 54);
+  color: rgb(114, 120, 125);
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  direction: rtl;
+  user-select: none;
+  height: 8vh;
+}
+
+/*overall customizations*/
+
+/*Annoying dashed border*/
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+*:focus {
+  outline: none 0;
+}
+
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(204, 204, 196);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, orange, yellow);
 }
