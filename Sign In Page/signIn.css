@@ -155,6 +155,7 @@ body {
   width: 75px;
   height: 28px;
   text-align: center;
+  padding-top: 3px;
 }
 
 .email__2 {
@@ -183,6 +184,7 @@ body {
   height: 28px;
   text-align: center;
   align-items: center;
+  padding-top: 3px;
 }
 
 .password__2 {
@@ -212,10 +214,10 @@ body {
   border-color: rgb(255, 200, 10);
 }
 
-.signUp-link{
+.signUp-link {
   padding: 30px;
   font-size: 14px;
-  font-display: aquamarine;
+  color: brown;
 }
 
 .footer {
@@ -241,6 +243,26 @@ a:hover,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+/* unvisited link */
+.signUp-link:link {
+  color: blue;
+}
+
+/* visited link */
+.signUp-link:visited {
+  color: purple;
+}
+
+/* mouse over link */
+.signUp-link:hover {
+  color: rgb(14, 186, 197);
+}
+
+/* selected link */
+.signUp-linka:active {
+  color: red;
 }
 
 *:focus {
