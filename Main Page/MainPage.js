@@ -1,3 +1,8 @@
+window.onload = function () {
+    init(true);
+}
+
+
 // slide show - start
 
 let slideIndex = 1;
@@ -43,14 +48,12 @@ let firstPage = "page1";
 let lastPage = "page" + totalPages.toString();
 let currentPage = "page1";
 
-window.onload = function () {
-    init(true);
-}
 
 function init(good) {
     if (good) {
         initGoods(40);
     }
+    getGoods();
     goods = document.getElementsByClassName("good");
     totalPages = Math.ceil(goods.length / itemsPerPage);
     lastPage = "page" + totalPages.toString();
@@ -124,7 +127,6 @@ function initGoods(n) {
         createGood("pic/bag.png", "bag image", "کوله پشتی خردلی", "دسته بندی یک", "40,000 تومان")
     }
 }
-
 
 function initPages() {
     if (totalPages > 1) {
@@ -314,7 +316,7 @@ function login(username, password) {
             localStorage.setItem("token", this.getResponseHeader('Authorization'));
         if (this.responseText === 'logged in') {
             document.getElementById('before-login').style.display = 'none';
-            document.getElementById('username-button').innerHTML= `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
+            document.getElementById('username-button').innerHTML = `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
             document.getElementById('after-login').style.display = 'block';
         } else {
             document.getElementById('before-login').style.display = 'block';
@@ -325,20 +327,20 @@ function login(username, password) {
     let data = dataCreator("username", username, "&");
     data += dataCreator("password", password, "");
     request.open("POST", "http://localhost:3000/login");
-    // request.open("GET", "http://localhost:3000/");
     localStorage.setItem('username', username);
     request.setRequestHeader('Authorization', localStorage.getItem("token"));
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.send(data);
-    // request.send();
 }
-function checkLogin(){
+
+
+function checkLogin() {
     const username = localStorage.getItem('username');
     const request = new XMLHttpRequest();
     request.onload = function () {
         if (this.responseText === 'logged in') {
             document.getElementById('before-login').style.display = 'none';
-            document.getElementById('username-button').innerHTML= `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
+            document.getElementById('username-button').innerHTML = `${username} <i class="fa fa-chevron-down" aria-hidden="true"></i>`;
             document.getElementById('after-login').style.display = 'block';
         } else {
             document.getElementById('before-login').style.display = 'block';
@@ -352,11 +354,20 @@ function checkLogin(){
     request.send();
 }
 
-
-function logout(){
+function logout() {
     localStorage.removeItem("token");
     document.getElementById('before-login').style.display = 'block';
     document.getElementById('after-login').style.display = 'none';
+}
+
+function getGoods() {
+    const request = new XMLHttpRequest();
+    request.onload = function () {
+        let data = JSON.parse(this.responseText);
+        console.log(btoa(data[0].image.data));
+    }
+    request.open("GET", "http://localhost:3000/goods");
+    request.send();
 }
 
 // server communications - end
