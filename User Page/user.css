@@ -147,17 +147,17 @@ body {
 }
 
 .page-title-1 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .page-title-2 {
-    font-size: px;
-    margin-top: 7px;
-    margin-right: 5px;
-    margin-left: 20px;
+  font-size: px;
+  margin-top: 7px;
+  margin-right: 5px;
+  margin-left: 20px;
 }
 
-.balance{
+.balance {
   font-size: 12px;
   font-family: "B Yekan", "ABeeZee", serif;
   display: flex;
@@ -406,4 +406,89 @@ a:active {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to top, orange, yellow);
+}
+
+.tabs-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+}
+
+.tab-details-wrapper {
+  margin: 20px;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #fff;
+  color: gray;
+  font-weight: bold;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+  border: solid gray 1px;
+}
+.tablink__left {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.tablink__right {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.tablink:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.factor-table {
+  margin-top: 40px;
+  width: 900px;
+  background-color: white;
+}
+
+.table-factor-header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  border-bottom: solid lightgray 1px;
+  padding: 40px;
+}
+
+.table-factor-header-name {
+  width: 25%;
+  color: lightgray;
+}
+
+.table-factor-content {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  border-bottom: solid lightgray 1px;
+  padding: 40px;
+}
+
+.table-factor-content-item {
+  width: 25%;
+}
+
+.ltr {
+  font-family: monospace;
 }

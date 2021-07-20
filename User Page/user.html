@@ -70,55 +70,125 @@
         <button class="balance">افزایش موجودی</button>
       </div>
       <!-- Tab links -->
-      <div class="tab">
-        <button class="profiletab">
-          <a href="../User%20Page/user.html"></a>پروفایل
-        </button>
-        <button class="receipttab">
-          <a href="../User%20Page/user.html"></a>رسیدها
-        </button>
-      </div>
-      <div class="personal-info">
-        <div class="first-name">
-          <div class="first-name-1">نام</div>
-          <input
-            id="inputName"
-            type="text"
-            class="first-name-2"
-            placeholder="... نام خود را وارد کنید"
-          />
+      <section class="tabs-section">
+        <div class="tab-buttons-wrapper">
+          <button
+            class="tablink tablink__left"
+            onclick="openPage('factors', this, 'lightgray')"
+          >
+            رسیدها
+          </button>
+          <button
+            id="defaultOpen"
+            class="tablink tablink__right"
+            onclick="openPage('profile', this, 'lightgray')"
+          >
+            پروفایل
+          </button>
         </div>
-        <div class="last-name">
-          <div class="last-name-1">نام خانوادگی</div>
-          <input
-            id="inputFamilyName"
-            type="text"
-            class="last-name-2"
-            placeholder="... نام خانوادگی خود را وارد کنید"
-          />
+
+        <div id="profile" class="tabcontent">
+          <div class="personal-info">
+            <div class="first-name">
+              <div class="first-name-1">نام</div>
+              <input
+                id="inputName"
+                type="text"
+                class="first-name-2"
+                placeholder="... نام خود را وارد کنید"
+              />
+            </div>
+            <div class="last-name">
+              <div class="last-name-1">نام خانوادگی</div>
+              <input
+                id="inputFamilyName"
+                type="text"
+                class="last-name-2"
+                placeholder="... نام خانوادگی خود را وارد کنید"
+              />
+            </div>
+          </div>
+          <div class="email-pass">
+            <div class="password">
+              <div class="password__1">رمز عبور</div>
+              <input
+                id="inputPass"
+                type="password"
+                class="password__2"
+                placeholder="... رمز عبور خود را وارد کنید"
+                minlength="6"
+              />
+            </div>
+          </div>
+          <div class="address">
+            <div class="address-1">آدرس</div>
+            <input
+              id="inputAddress"
+              class="address-2"
+              placeholder="آدرس خود را وارد کنید"
+            />
+          </div>
+          <button id="editBtn" class="input">ویرایش اطلاعات</button>
         </div>
-      </div>
-      <div class="email-pass">
-        <div class="password">
-          <div class="password__1">رمز عبور</div>
-          <input
-            id="inputPass"
-            type="password"
-            class="password__2"
-            placeholder="... رمز عبور خود را وارد کنید"
-            minlength="6"
-          />
+        <div id="factors" class="tabcontent">
+          <div class="table factor-table">
+            <p class="table-factor-header">
+              <span class="table-factor-header-name"> کد پیگیری</span>
+              <span class="table-factor-header-name">کالا </span>
+              <span class="table-factor-header-name"> قیمت پرداخت شده</span>
+              <span class="table-factor-header-name"> آدرس ارسال شده</span>
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="address">
-        <div class="address-1">آدرس</div>
-        <input
-          id="inputAddress"
-          class="address-2"
-          placeholder="آدرس خود را وارد کنید"
-        />
-      </div>
-      <button id="editBtn" class="input">ویرایش اطلاعات</button>
+      </section>
     </div>
     <div class="footer">
       <p>تمامی حقوق برای توسعه دهندگان (نیک و ناک) محفوظ است.</p>
