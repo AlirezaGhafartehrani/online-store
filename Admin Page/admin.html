@@ -1,12 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=ABeeZee"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css"
+    />
+    <title>admin page</title>
+  </head>
+  <body>
+    <div id="menu">
+      <div id="left-menu">
+        <!-- <p
+          id="before-login"
+          class="sign-button menu-item"
+          onclick="login('nicolo', '12345678')"
+        >
+          <a href="../Sign%20In%20Page/signIn.html" target="_blank">
+            ورود/ثبت نام</a
+          >
+        </p> -->
+        <div id="after-login" class="dropdown menu-item">
+          <p id="username-button" class="sign-button">
+            هادی<i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </p>
+          <div class="dropdown-content">
+            <a href="#">پروفایل</a>
+            <a href="#" onclick="logout()">خروج از حساب</a>
+          </div>
+        </div>
+      </div>
+      <div class="blank-menu">
+        <!--    just an empty space! -->
+      </div>
+      <div class="menu-item">
+        <p>
+          <a href="Main%20Page/mainPage.html#goods-grid-container">محصولات</a>
+        </p>
+      </div>
+      <div class="menu-item">
+        <p><a>پشتیبانی</a></p>
+      </div>
+      <div class="menu-item">
+        <p><a>تماس با ما</a></p>
+      </div>
+      <div class="menu-item">
+        <p><a href="Main%20Page/mainPage.html">صفحه اول</a></p>
+      </div>
+      <div class="menu-item">
+        <p id="shop-button">
+          <a href="Main%20Page/mainPage.html#goods-grid-container">فروشگاه</a>
+        </p>
+      </div>
+    </div>
+    <h1 class="header-welcome-note">ادمین عزیز خوش آمدید</h1>
+    <section class="tabs-section">
+      <div class="tab-buttons-wrapper">
+        <button
+          class="tablink tablink__left"
+          onclick="openPage('factors', this, 'lightgray')"
+        >
+          رسیدها
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('categories-list', this, 'lightgray')"
+        >
+          لیست دسته ها
+        </button>
+        <button
+          class="tablink tablink__right"
+          onclick="openPage('goods-list', this, 'lightgray')"
+          id="defaultOpen"
+        >
+          لیست کالاها
+        </button>
+      </div>
+      <div class="tab-details-wrapper">
+        <div id="factors" class="tabcontent">
+          <div class="table">
+            <p class="table-header">
+              <span class="table-header-name"> نام دسته بندی</span>
+              <span class="table-header-name">عملیات </span>
+            </p>
+            <p class="table-content">
+              <span class="table-content-item"> دسته بندی</span>
+              <span class="table-content-item_1">ویرایش دسته بندی </span>
+              <span class="table-content-item_2"> X حذف دسته بندی </span>
+            </p>
+            <p class="table-content">
+              <span class="table-content-item"> دسته بندی</span>
+              <span class="table-content-item_1">ویرایش دسته بندی </span>
+              <span class="table-content-item_2"> X حذف دسته بندی </span>
+            </p>
+            <p class="table-content">
+              <span class="table-content-item"> دسته بندی</span>
+              <span class="table-content-item_1">ویرایش دسته بندی </span>
+              <span class="table-content-item_2"> X حذف دسته بندی </span>
+            </p>
+            <p class="table-content">
+              <span class="table-content-item"> دسته بندی</span>
+              <span class="table-content-item_1">ویرایش دسته بندی </span>
+              <span class="table-content-item_2"> X حذف دسته بندی </span>
+            </p>
+          </div>
+        </div>
+
+        <div id="categories-list" class="tabcontent">
+          <div class="search-filed-wrapper">
+            <input
+              type="text"
+              class="inputSearch"
+              placeholder="کد پیگیری را برای جست و جو وارد کنید..."
+            />
+            <button class="search-btn">جست و جوی کد پیگیری</button>
+          </div>
+          <div class="table factor-table">
+            <p class="table-factor-header">
+              <span class="table-factor-header-name"> کد پیگیری</span>
+              <span class="table-factor-header-name">کالا </span>
+              <span class="table-factor-header-name"> قیمت پرداخت شده</span>
+              <span class="table-factor-header-name">نام خریدار </span>
+              <span class="table-factor-header-name"> آدرس ارسال شده</span>
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+            <p class="table-factor-content">
+              <span class="table-factor-content-item ltr"> SHOP102030 </span>
+              <span class="table-factor-content-item">موس گیمینگ ریز </span>
+              <span class="table-factor-content-item"> 10000 تومان</span>
+              <span class="table-factor-content-item"> هادی</span>
+              <span class="table-factor-content-item">
+                تهران، تهران، امیرکبیر</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="goods-list" class="tabcontent">
+        <div class="newgood-wrapper">
+          <button class="purchase-button">+ایجاد محصول جدید</button>
+        </div>
+        <div id="goods-grid-container">
+          <div class="good">
+            <div class="badge">12</div>
+            <img src="bag.png" alt="bag image" class="good-image" />
+            <p class="good-title">کوله پشتی خردلی</p>
+            <p class="good-category">دسته بندی یک</p>
+            <hr class="solid-divider" />
+            <div class="good-purchase">
+              <button class="purchase-button">ویرایش محصول</button>
+              <p class="good-price">10,000 تومان</p>
+            </div>
+          </div>
+          <div class="good">
+            <div class="badge">12</div>
+            <img src="bag.png" alt="bag image" class="good-image" />
+            <p class="good-title">کوله پشتی خردلی</p>
+            <p class="good-category">دسته بندی یک</p>
+            <hr class="solid-divider" />
+            <div class="good-purchase">
+              <button class="purchase-button">ویرایش محصول</button>
+              <p class="good-price">10,000 تومان</p>
+            </div>
+          </div>
+          <div class="good">
+            <div class="badge">12</div>
+            <img src="bag.png" alt="bag image" class="good-image" />
+            <p class="good-title">کوله پشتی خردلی</p>
+            <p class="good-category">دسته بندی یک</p>
+            <hr class="solid-divider" />
+            <div class="good-purchase">
+              <button class="purchase-button">ویرایش محصول</button>
+              <p class="good-price">10,000 تومان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="admin.js"></script>
 </html>
