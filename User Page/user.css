@@ -427,6 +427,8 @@ a:active {
 
 /* Style tab links */
 .tablink {
+  font-size: 15px;
+  font-family: "B Yekan", "ABeeZee", serif;
   background-color: #fff;
   color: gray;
   font-weight: bold;
@@ -434,8 +436,7 @@ a:active {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
+  padding: 10px 10px;
   width: 20%;
   border: solid gray 1px;
 }
